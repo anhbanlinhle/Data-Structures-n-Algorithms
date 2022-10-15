@@ -1,0 +1,31 @@
+class Stack {
+  int size, max
+  int *stack
+
+  Stack(int max) {
+    this.max = max
+    size = 0
+    stack = new int[max]
+  }
+
+  bool isEmpty() {
+    return (size == 0)
+  }
+
+  void push(int data) {         O(1)
+    if size < max 
+      stack[size] = data
+      size++
+  }
+
+  void pop() {                  O(1)
+    if size > 0
+      size--
+  }
+
+  void print() {
+    for i = 0; i < size         O(n)
+      print stack[i]
+  }
+
+}

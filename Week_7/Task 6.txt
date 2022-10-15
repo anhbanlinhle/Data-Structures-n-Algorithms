@@ -1,0 +1,50 @@
+class Node {
+  int data 
+  Node *prev
+  Node *next
+
+  Node(int data) {
+    this.data = data
+    prev = NULL
+    next = NULL
+  }
+}
+
+class Stack {
+  Node *head
+  Node *tail
+
+  Stack() {
+    head = NULL
+    tail = NULL
+  }
+
+  bool isEmpty() {
+    return head == NULL || tail == NULL
+  }
+
+  void push(data) {           O(1)
+    Node* temp = new Node(data)
+    if isEmpty()
+        head = temp
+        tail = temp
+    else
+      head->prev = temp
+      temp->next = head
+      head = temp
+  }
+
+  void pop() {                O(1)
+    if isEmpty 
+      return
+    head = head->next
+    head->prev = NULL
+  }
+
+  void print() {              O(n)
+    Node *temp = head
+    while temp != NULL
+      print temp->data
+      temp = temp->next
+  }
+}

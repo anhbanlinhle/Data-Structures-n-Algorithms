@@ -1,0 +1,34 @@
+class Queue
+    int size, max
+    int *queue
+
+    Queue(int max) {
+        this.max = max
+        size = 0
+        queue = new int[max]
+    }
+
+    bool isEmpty() {
+        return (size == 0)
+    }
+
+    void enqueue(int data) {    O(1)
+        if size = max 
+            print "Overflow"
+        else 
+            queue[size] = data
+            size++
+    }
+    void dequeue() {            O(n)
+        if size = 0
+            print "Empty"
+        else
+            for i = 0; i < size - 1
+                queue[i] = queue[i+1]
+
+        size--
+    }
+    void print() {              O(n)
+        for i = 0; i < size
+            print queue[i]
+    }
