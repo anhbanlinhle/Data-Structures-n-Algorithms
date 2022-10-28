@@ -1,0 +1,11 @@
+TreeSearch(k, T) {
+  if (T == NULL)
+    return false
+  
+  if (T->key == k)
+        return true
+  else if (T->key < k)
+        return TreeSearch(k, T->right)
+  else
+        return TreeSearch(k, T->left)
+}

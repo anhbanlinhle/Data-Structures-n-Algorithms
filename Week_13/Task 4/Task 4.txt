@@ -1,0 +1,25 @@
+O(n):
+
+long square(int n) {
+    long ans = 1
+
+    for i = 0; i < n
+        ans = ans * 2;
+
+    return ans
+}
+
+
+O(logn):
+
+long square(int n) {
+    if n <= 1
+        return n + 1
+
+    ans = square(n/2)
+    
+    if n%2 == 0
+        return ans * ans
+    else 
+        return 2 * ans * ans
+}

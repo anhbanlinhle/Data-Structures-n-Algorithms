@@ -1,0 +1,18 @@
+Function sum:
+  sum = 0;
+  for ( i = 0; i < n; i + +)              O(n)
+    for ( j = i + 1; j < = n; j + +)      O(n)
+      for ( k = 1; k < 10; k + +)         O(n)
+        sum = sum + i * j * k ;
+
+=> O(n^3)
+
+Function Matrix:
+  for (i = 0 ; i < n ; i++)               O(n)
+    for (j = 0 ; j < n ; j++)             O(n)
+      if (i == j)
+        A[i][j] = 1;
+      else 
+        A[i][j] = 0; 
+
+=> O(n^2)

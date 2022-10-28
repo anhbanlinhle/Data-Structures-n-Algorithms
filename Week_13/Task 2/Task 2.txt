@@ -1,0 +1,27 @@
+void findMinOdd(llist *Head) {
+  llist* temp = Head;
+  while (temp->data % 2 == 0)
+    temp = temp->next;
+
+  int min = temp->data;
+  while (temp->next != NULL) {
+    if (temp->data % 2 == 1)
+      if (temp->data < min)
+         min = temp->data;
+    temp = temp->next;
+  } 
+}
+
+void removeAllOdd(llist *Head) {
+  while (Head->data % 2 == 1)
+    Head = Head->next;
+  
+  llist *temp = Head;
+  
+  do {
+    if (temp->next->data % 2 == 1)
+      temp->next = temp->next->next;
+    temp = temp->next;
+  }
+  while (temp->next->next != NULL);
+}
