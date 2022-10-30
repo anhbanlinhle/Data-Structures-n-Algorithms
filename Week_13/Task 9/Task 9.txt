@@ -9,3 +9,17 @@ TreeSearch(k, T) {
   else
         return TreeSearch(k, T->left)
 }
+
+
+///////////////////////////////////////////
+
+bool TreeSearch(Leaf* root, int data) {
+    if (root == NULL)
+        return false;
+    if (root->key == data)
+        return true;
+    else if (root->key < data)
+        return findKey(root->right, data);
+    else
+        return findKey(root->left, data);
+}
